@@ -1,19 +1,17 @@
-import Mock from 'mockjs'
+import Mock from "mockjs"
 
 Mock.mock('/user',{
-    'name':'@name',
+    'name': '@name',
     'email':'@email',
-    'age|1-20':5
+    'age|1-10':5
 });
 
 Mock.mock('/menu',{
-    'id':'@increment',
-    'name':'menu',
-    'order|1-20':10
+    'id': '@increment',
+    'name':'@menu',
+    'order|10-20':12
 });
 
 Mock.mock('/login',{
-    'id':'@increment',
-    'name':'menu',
-    'order|1-20':10
+    'token': '1111111111111111111'
 });

@@ -1,11 +1,11 @@
 <template>
   <div class="page">
-    <h2>404 Error Page</h2>
+    <h2>404 Page</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: ''
+  name: '404'
 }
 </script>
