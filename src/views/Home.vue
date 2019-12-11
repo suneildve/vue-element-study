@@ -13,28 +13,28 @@ import mock from '@/mock/index.js'
 export default {
   name: 'Home',
   methods:{
-      getUser() {
-        axios.get('/user')  
-        .then(function (response) {  
-            alert(JSON.stringify(response.data));
-            console.log(response);  
-        })  
-        .catch(function (error) {  
-            //alert(error);
-            console.log(error);  
-        });  
-      },
-      getMuenu() {
-        axios.get('/menu')  
-        .then(function (response) {  
-            alert(JSON.stringify(response.data));
-            console.log(response);  
-        })  
-        .catch(function (error) {  
-            //alert(error);
-            console.log(error);  
-        });  
-      }
+      // getUser() {
+      //   axios.get('/user')  
+      //   .then(function (response) {  
+      //       alert(JSON.stringify(response.data));
+      //       console.log(response);  
+      //   })  
+      //   .catch(function (error) {  
+      //       //alert(error);
+      //       console.log(error);  
+      //   });  
+      // },
+      // getMuenu() {
+      //   axios.get('/menu')  
+      //   .then(function (response) {  
+      //       alert(JSON.stringify(response.data));
+      //       console.log(response);  
+      //   })  
+      //   .catch(function (error) {  
+      //       //alert(error);
+      //       console.log(error);  
+      //   });  
+      // }
 
   }
 }

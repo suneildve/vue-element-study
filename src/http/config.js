@@ -1,10 +1,10 @@
 export default {
     method: 'get',
     // 基础url前缀
-    baseURL: '',//http://localhost:8080
+    baseURL: 'http://localhost:3001',//http://localhost:8080
     // 请求头信息
     headers: {
-        'Content-Type': 'application/json;charset=UTF-8'
+        'Content-Type': 'Access-Control-Allow-Origin;application/json;charset=UTF-8'
     },
     // 参数
     data: {},
