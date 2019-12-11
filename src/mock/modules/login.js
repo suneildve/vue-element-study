@@ -3,7 +3,7 @@ export function login () {
   return {
     // isOpen: false,
     url: '/login',
-    type: 'get',
+    type: 'post',
     data: {
       'msg': 'success',
       'code': 0,
