@@ -21,15 +21,19 @@ export default function $axios(options) {
         // 1. 请求开始的时候可以结合 vuex 开启全屏 loading 动画
         // console.log(store.state.loading)
         console.log('准备发送请求...')
-
-        config.withCredentials = true 
-        let token = sessionStorage.getItem('access_token')
+        // config.withCredentials = true 
+        // let token = sessionStorage.getItem('access_token')
+        let token = sessionStorage.getItem('authorization')
         // 2. 带上token
         if (token) {
-          config.headers.accessToken = token
+          // config.headers.accessToken = token;
+          // config.headers['Authorization'] = token;   
+          instance.defaults.headers.common['Authorization'] = token;  
+          instance.defaults.headers.common['token'] = token;  
+          // config.headers.common['Authorization'] = token;      
         } else {
           // 重定向到登录页面
-          router.push('/login')
+          //router.push('/login')
         }
         // 3. 根据请求方法，序列化传来的参数，根据后端需求是否序列化
         if (config.method === 'post') {
@@ -42,6 +46,18 @@ export default function $axios(options) {
           //   config.data = qs.stringify(config.data)
           // }
         }
+      //   if (config.method.toLocaleLowerCase() === 'post'
+      //    || config.method.toLocaleLowerCase() === 'put'
+      //    || config.method.toLocaleLowerCase() === 'delete') {
+  
+      //    config.data = JSON.stringify(config.data)
+      //    console.log(config)
+      //  }
+
+
+        // console.log(config);
+        // console.log(instance.defaults.headers);
+        
         return config
       },
 

@@ -17,13 +17,13 @@ export const login = data => {
 export const getUser = () => {
     return axios({
         url: '/user',
-        method: 'get'
+        method: 'post'
     })
 }
 
-export const getMenu = data => {
+export const register = data => {
     return axios({
-        url: '/menu',
+        url: '/register',
         method: 'post',
         data
     })
@@ -33,5 +33,5 @@ export const getMenu = data => {
 export default {
     login,
     getUser,
-    getMenu
+    register
 }

@@ -57,8 +57,10 @@ export default {
             let userInfo = {username:this.loginForm.username, password:this.loginForm.password}
             this.$api.login(JSON.stringify(userInfo)).then((res) => {
                 //Cookies.set('token', res.data.token) // 放置token到Cookie
-                console.log(res.data)
-                sessionStorage.setItem('user', userInfo.account) // 保存用户到本地会话
+                console.log(res.data.token)
+                // let token = sessionStorage.getItem('authorization')
+                // sessionStorage.setItem('authorization', 'Bearer ' + res.data.token) // 保存用户到本地会话
+                sessionStorage.setItem('authorization', 'Bearer ' + res.data.token) // 保存用户到本地会话
                 this.$router.push('/')  // 登录成功，跳转到主页
             }).catch(function(res) {
                 console.log(res)
