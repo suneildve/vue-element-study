@@ -60,7 +60,7 @@ export default {
                 console.log(res.data.token)
                 // let token = sessionStorage.getItem('authorization')
                 // sessionStorage.setItem('authorization', 'Bearer ' + res.data.token) // 保存用户到本地会话
-                sessionStorage.setItem('authorization', 'Bearer ' + res.data.token) // 保存用户到本地会话
+                sessionStorage.setItem('access_token', 'Bearer ' + res.data.token) // 保存用户到本地会话
                 this.$router.push('/')  // 登录成功，跳转到主页
             }).catch(function(res) {
                 console.log(res)

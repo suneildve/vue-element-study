@@ -17,14 +17,14 @@ export const login = data => {
 export const getUser = () => {
     return axios({
         url: '/user',
-        method: 'post'
+        method: 'get'
     })
 }
 
 export const register = data => {
     return axios({
         url: '/register',
-        method: 'post',
+        method: 'get',
         data
     })
 }
